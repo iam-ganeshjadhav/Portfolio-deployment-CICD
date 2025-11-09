@@ -1,0 +1,47 @@
+pipeline {
+  agent any
+
+  environment {
+    REMOTE_USER = "ubuntu"
+    REMOTE_HOST = "13.204.69.53"
+    REMOTE_DIR  = "/var/www/html"
+    SSH_CRED    = "node-key"
+  }
+
+  stages {
+
+    stage('Checkout Repository') {
+      steps {
+        git url: 'https://github.com/iam-ganeshjadhav/Portfolio-deployment-CICD.git', branch: 'main'
+      }
+    }
+
+    stage('Deploy to EC2') {
+      steps {
+        sshagent(credentials: [env.SSH_CRED]) {
+          sh """
+            echo '🧹 Cleaning old files...'
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} 'sudo rm -rf ${REMOTE_DIR}/*'
+            
+            echo '📦 Uploading new files...'
+            scp -o StrictHostKeyChecking=no -r * ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/
+
+            echo '🔁 Restarting Nginx...'
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} 'sudo systemctl restart nginx'
+
+            echo '✅ Deployment Complete!'
+          """
+        }
+      }
+    }
+  }
+
+  post {
+    success {
+      echo "🎉 Portfolio deployed successfully to EC2: http://${env.REMOTE_HOST}"
+    }
+    failure {
+      echo "❌ Deployment failed!"
+    }
+  }
+}
