@@ -1,110 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ganesh Jadhav • DevOps Engineer</title>
-  <link rel="icon" href="IMG/my.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh | DevOps Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="particles"></div>
-
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="IMG/my.jpg" alt="Ganesh Jadhav" class="avatar" />
-      <h1 class="hero-title">Hi, I'm <span class="name">Ganesh Jadhav</span></h1>
-      <h2 class="hero-sub"><span id="typed"></span><span class="cursor">|</span></h2>
-      <div class="cta">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>GJ</span></div>
+        <div>
+          <div style="font-weight:800">Ganesh Jadhav — DevOps Engineer</div>
+          <div style="font-size:12px;color:var(--muted)">Building scalable and automated systems</div>
+        </div>
       </div>
-      <nav class="socials">
-        <a href="https://github.com/iam-ganeshjadhav" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/ganesh-jadhav" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:ganesh@example.com">Email</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire Me</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="about" class="section">
-      <div class="wrap">
-        <h3>About</h3>
-        <p>I build reliable CI/CD pipelines, provision cloud infrastructure, and automate deployments. My stack includes Jenkins, Docker, Kubernetes, Terraform, AWS, Git, and monitoring tools.</p>
-      </div>
-    </section>
-
-    <section id="skills" class="section dark">
-      <div class="wrap">
-        <h3>Skills & Tools</h3>
-        <div class="skills-grid">
-          <div class="skill">AWS</div>
-          <div class="skill">Docker</div>
-          <div class="skill">Kubernetes</div>
-          <div class="skill">Terraform</div>
-          <div class="skill">Jenkins</div>
-          <div class="skill">Ansible</div>
-          <div class="skill">Prometheus</div>
-          <div class="skill">Grafana</div>
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi, I'm Ganesh. I build DevOps pipelines & deploy secure web apps.</h1>
+          <p>I’m a DevOps and Cloud Engineer specializing in CI/CD, automation, and cloud infrastructure. I create efficient, reliable systems and beautiful UI experiences.</p>
+          <div class="badges">
+            <div class="chip">AWS</div>
+            <div class="chip">Docker</div>
+            <div class="chip">Kubernetes</div>
+            <div class="chip">Jenkins</div>
+            <div class="chip">Terraform</div>
+          </div>
+          <div style="margin-top:22px;display:flex;gap:12px">
+            <a class="btn" href="#projects" style="background:transparent;border:1px solid rgba(255,255,255,0.06)">See Projects</a>
+            <a class="btn" href="#contact" style="background:linear-gradient(90deg,var(--accent),#00c2ff);color:#061026">Let's Talk</a>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="projects" class="section">
-      <div class="wrap">
-        <h3>Projects</h3>
-        <div class="projects-grid">
-          <a class="proj" href="https://github.com/iam-ganeshjadhav/linkedin-clone" target="_blank" rel="noopener">
-            <h4>LinkedIn Clone</h4>
-            <p>Flask + MySQL responsive app with login, posts and profile pages.</p>
-            <span class="tag">Flask</span>
-            <span class="tag">MySQL</span>
-          </a>
-          <a class="proj" href="https://github.com/iam-ganeshjadhav/mini-online-shop" target="_blank" rel="noopener">
-            <h4>Mini Online Shop</h4>
-            <p>Full-stack e-commerce app with cart, checkout and admin panel.</p>
-            <span class="tag">Flask</span>
-            <span class="tag">Bootstrap</span>
-          </a>
-          <a class="proj" href="https://github.com/iam-ganeshjadhav/devops-cicd-pipeline" target="_blank" rel="noopener">
-            <h4>CI/CD Pipeline</h4>
-            <p>Jenkins + Maven + Tomcat pipeline with auto-deploy to EC2.</p>
-            <span class="tag">Jenkins</span>
-            <span class="tag">Maven</span>
-          </a>
-          <a class="proj" href="https://github.com/iam-ganeshjadhav/cloud-infra-setup" target="_blank" rel="noopener">
-            <h4>Cloud Infra Setup</h4>
-            <p>Terraform + AWS to provision multi-tier architecture and networking.</p>
-            <span class="tag">Terraform</span>
-            <span class="tag">AWS</span>
-          </a>
-          <a class="proj" href="https://github.com/iam-ganeshjadhav/docker-portfolio" target="_blank" rel="noopener">
-            <h4>Dockerized Portfolio</h4>
-            <p>Portfolio containerized with Docker and Docker Compose for quick deploys.</p>
-            <span class="tag">Docker</span>
-            <span class="tag">Compose</span>
-          </a>
+        <aside class="profile-card">
+          <div class="profile-media">
+            <div class="avatar">
+              <img src="https://images.unsplash.com/photo-1603415526960-f7e0328d6e9c?q=80&w=500" alt="Ganesh Avatar" />
+            </div>
+            <div class="name">Ganesh Jadhav</div>
+            <div class="role">DevOps Engineer</div>
+            <div class="socials">
+              <a href="https://github.com/iam-ganeshjadhav" target="_blank">GitHub</a>
+              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="grid-3">
+          <div class="card">
+            <h3>About Me</h3>
+            <p style="color:var(--muted)">I design and manage cloud-native systems, automate pipelines, and optimize applications for performance and scalability.</p>
+          </div>
+          <div class="card">
+            <h3>Skills</h3>
+            <div class="skill-list">
+              <div class="skill">AWS</div>
+              <div class="skill">Jenkins</div>
+              <div class="skill">Kubernetes</div>
+              <div class="skill">Terraform</div>
+              <div class="skill">GitHub Actions</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Contact</h3>
+            <p style="color:var(--muted)">Open to DevOps, Cloud, or Automation roles.</p>
+            <div class="links">
+              <a class="btn" href="mailto:ganesh@example.com">Email</a>
+              <a class="btn" href="#">Resume</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact" class="section dark">
-      <div class="wrap">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:ganesh@example.com">ganesh@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/iam-ganeshjadhav" target="_blank" rel="noopener">github.com/iam-ganeshjadhav</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/ganesh-jadhav" target="_blank" rel="noopener">linkedin.com/in/ganesh-jadhav</a></p>
-      </div>
-    </section>
-  </main>
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+          <div class="project card">
+            <div class="meta">
+              <div><strong>CI/CD Pipeline</strong></div>
+              <div class="tags">
+                <div class="tag">Jenkins</div>
+                <div class="tag">Docker</div>
+              </div>
+            </div>
+            <p>Automated build and deployment pipeline using Jenkins, Docker, and AWS EC2.</p>
+            <div class="links">
+              <a class="btn" href="#">View</a>
+              <a class="btn" href="#">Code</a>
+            </div>
+          </div>
 
-  <footer>
-    <div class="wrap">
-      <p>© 2025 Ganesh Jadhav • Built with DevOps ❤️</p>
-    </div>
-  </footer>
+          <div class="project card">
+            <div class="meta">
+              <div><strong>Portfolio Website</strong></div>
+              <div class="tags">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+              </div>
+            </div>
+            <p>Responsive personal portfolio website built with HTML, CSS, and JS.</p>
+            <div class="links">
+              <a class="btn" href="#">Live</a>
+              <a class="btn" href="#">Repo</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="script.js"></script>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="card" action="mailto:ganesh@example.com" method="post" enctype="text/plain">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Message"></textarea>
+          <button class="btn" type="submit" style="background:linear-gradient(90deg,var(--accent),#00c2ff);color:#061026">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Ganesh Jadhav | DevOps Engineer</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
