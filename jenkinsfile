@@ -20,9 +20,16 @@ pipeline {
       steps {
         sshagent(credentials: [env.SSH_CRED]) {
           sh """
+            echo '🔧 Preparing server...'
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} '
+              sudo mkdir -p ${REMOTE_DIR} &&
+              sudo chown -R ${REMOTE_USER}:${REMOTE_USER} ${REMOTE_DIR} &&
+              sudo chmod -R 755 ${REMOTE_DIR}
+            '
+
             echo '🧹 Cleaning old files...'
-            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} 'sudo rm -rf ${REMOTE_DIR}/*'
-            
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} 'rm -rf ${REMOTE_DIR}/*'
+
             echo '📦 Uploading new files...'
             scp -o StrictHostKeyChecking=no -r * ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/
 
