@@ -177,7 +177,8 @@ pipeline {
 ## 👨‍💻 Author  
 
 **Ganesh Jadhav**  
-💼 *DevOps & Cloud Enthusiast*  
+💼 *DevOps & Cloud Enthusiast*
+  
 🌐 [GitHub Profile](https://github.com/iam-ganeshjadhav)
 🔗 [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile)  
 📧 **jadhavg9370@gmail.com**
