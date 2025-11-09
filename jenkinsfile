@@ -19,21 +19,21 @@ pipeline {
     stage('Deploy to EC2') {
       steps {
         sshagent(credentials: [env.SSH_CRED]) {
-          sh """
-            echo '🔧 Preparing server (Apache setup)...'
-            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} '
+          sh '''
+            echo "🔧 Preparing server (Apache setup)..."
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} "
               # Install Apache if missing
               if ! command -v apache2 >/dev/null 2>&1 && ! command -v httpd >/dev/null 2>&1; then
-                echo "📦 Installing Apache..."
-                if [ -x "$(command -v apt)" ]; then
+                echo '📦 Installing Apache...'
+                if [ -x \$(command -v apt) ]; then
                   sudo apt update -y && sudo apt install -y apache2
-                elif [ -x "$(command -v dnf)" ]; then
+                elif [ -x \$(command -v dnf) ]; then
                   sudo dnf install -y httpd
                 fi
               fi
 
               # Enable and start Apache
-              if [ -x "$(command -v systemctl)" ]; then
+              if [ -x \$(command -v systemctl) ]; then
                 sudo systemctl enable apache2 || sudo systemctl enable httpd
                 sudo systemctl start apache2 || sudo systemctl start httpd
               fi
@@ -42,21 +42,21 @@ pipeline {
               sudo mkdir -p ${REMOTE_DIR}
               sudo chown -R ${REMOTE_USER}:${REMOTE_USER} ${REMOTE_DIR}
               sudo chmod -R 755 ${REMOTE_DIR}
-            '
+            "
 
-            echo '🧹 Cleaning old files...'
-            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} 'rm -rf ${REMOTE_DIR}/*'
+            echo "🧹 Cleaning old files..."
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} "rm -rf ${REMOTE_DIR}/*"
 
-            echo '📦 Uploading new website files...'
+            echo "📦 Uploading new website files..."
             scp -o StrictHostKeyChecking=no -r * ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/
 
-            echo '🔁 Restarting Apache...'
-            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} '
+            echo "🔁 Restarting Apache..."
+            ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} "
               sudo systemctl restart apache2 || sudo systemctl restart httpd
-            '
+            "
 
-            echo '✅ Deployment Complete!'
-          """
+            echo "✅ Deployment Complete!"
+          '''
         }
       }
     }
