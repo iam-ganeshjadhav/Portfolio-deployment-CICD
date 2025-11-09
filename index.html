@@ -1,130 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aditya Pratama — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh Jadhav | DevOps Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="profile">
-        <img class="avatar" src="https://adityacprtm.dev/profile.jpg" alt="Aditya Pratama" />
-        <div class="profile-info">
-          <h1>Aditya Pratama</h1>
-          <p class="role">DevOps | SRE | Cloud Engineer</p>
-          <div class="meta">
-            <a href="mailto:adityacprtm@gmail.com">adityacprtm@gmail.com</a>
-            <span class="dot">•</span>
-            <span>Jakarta, ID</span>
-          </div>
-        </div>
-      </div>
+  <div class="background"></div>
 
-      <nav class="main-nav">
-        <a href="/">About</a>
-        <a href="/resume">Resume</a>
-        <a class="active" href="/portfolio">Portfolio</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <div class="logo">Ganesh<span>Jadhav</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="portfolio-intro">
-      <h2>Portfolio</h2>
-      <div class="filter-row">
-        <label for="category">Select category</label>
-        <div class="filters">
-          <button class="filter-btn active" data-cat="all">All</button>
-          <button class="filter-btn" data-cat="certification">Certifications</button>
-          <button class="filter-btn" data-cat="project">Project</button>
-          <button class="filter-btn" data-cat="badge">Badge</button>
-        </div>
-      </div>
-    </section>
+  <section class="hero">
+    <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Profile" class="profile-img">
+    <h1>Hi, I'm <span>Ganesh Jadhav</span></h1>
+    <p>DevOps Engineer | Cloud & Automation Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
 
-    <section id="portfolio-grid" class="grid">
-      <article class="card" data-cat="certification">
-        <img src="https://adityacprtm.dev/Telkomsel_Tech_Titans_League.png" alt="Telkomsel Tech Titans League" />
-        <div class="card-body">
-          <h3>Telkomsel Tech Titans League - Software Development</h3>
-          <p class="tag">Certificate</p>
-        </div>
-      </article>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate DevOps and Cloud Engineer skilled in automation, CI/CD, and scalable infrastructure. I enjoy solving complex problems and deploying efficient systems that drive innovation and growth.</p>
+  </section>
 
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/High_Availability_Network_Design.png" alt="High Availability Network Design" />
-        <div class="card-body">
-          <h3>High-Availability Network Design</h3>
-          <p class="tag">Tech Stack: GNS3 - MikroTik</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="certification">
-        <img src="https://adityacprtm.dev/AWS_Certified_Cloud_Practitioner" alt="AWS Certified Cloud Practitioner" />
-        <div class="card-body">
-          <h3>AWS Certified Cloud Practitioner</h3>
-          <p class="tag">Certificate</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/Hidemail.png" alt="Hidemail" />
-        <div class="card-body">
-          <h3>Hidemail</h3>
-          <p class="tag">Full Stack MEVN - Vercel - Heroku</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/Serverless_Web_App.png" alt="Serverless Web App" />
-        <div class="card-body">
-          <h3>Serverless Web App</h3>
-          <p class="tag">AWS - reCAPTCHA</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="badge">
-        <img src="https://adityacprtm.dev/Try_Hack_Me_Badge.png" alt="TryHackMe Badge" />
-        <div class="card-body">
-          <h3>TryHackMe Badge</h3>
-          <p class="tag">Badge</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/Cajero_App.png" alt="Cajero App" />
-        <div class="card-body">
-          <h3>Cajero App</h3>
-          <p class="tag">CodeIgniter - HTML - CSS - JS</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/Transletin_Webiste.png" alt="Transletin Website" />
-        <div class="card-body">
-          <h3>Transletin Website</h3>
-          <p class="tag">Laravel - HTML - CSS - JS</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="project">
-        <img src="https://adityacprtm.dev/My_Birthday_Countdown.png" alt="Birthday Countdown" />
-        <div class="card-body">
-          <h3>Birthday Countdown</h3>
-          <p class="tag">HTML - CSS - Javascript - VueJs</p>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>All systems are operational. <a href="https://status.adityacprtm.dev">Status</a></p>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">AWS</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">Kubernetes</div>
+      <div class="skill-card">Jenkins</div>
+      <div class="skill-card">Linux</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Git/GitHub</div>
+      <div class="skill-card">CI/CD</div>
     </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>CI/CD Pipeline</h3>
+        <p>Automated deployment pipeline using Jenkins, Docker, and AWS.</p>
+        <a href="https://github.com/iam-ganeshjadhav" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Cloud Portfolio</h3>
+        <p>Deployed portfolio website on AWS EC2 using Nginx and SSL.</p>
+        <a href="https://github.com/iam-ganeshjadhav" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s collaborate! Feel free to reach out for opportunities or discussions.</p>
+    <a href="mailto:ganeshjadhav@example.com" class="btn">Say Hello</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Ganesh Jadhav | Built with ❤️ using HTML, CSS, JS</p>
   </footer>
 
   <script src="script.js"></script>
