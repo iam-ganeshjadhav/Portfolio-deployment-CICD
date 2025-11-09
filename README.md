@@ -19,6 +19,11 @@ This project demonstrates a **Continuous Integration and Continuous Deployment (
 **Developer → GitHub → Jenkins (Build & Deploy) → Deployment Server (AWS EC2)**
 
 
+![J](IMG/4.png)
+
+
+
+
 ---
 
 ## ⚙️ Tools & Technologies  
@@ -156,9 +161,9 @@ pipeline {
 
 | 🪜 Step | 🧾 Description | 🖼️ Screenshot |
 |:--------:|----------------|---------------|
-| 1️⃣ | **Jenkins Dashboard** | ![Jenkins Dashboard](images/jenkins-dashboard.png) |
-| 2️⃣ | **Build Success in Jenkins** | ![Build Success](images/build-success.png) |
-| 3️⃣ | **Portfolio Deployed on AWS EC2** | ![Portfolio Deployed](images/portfolio-live.png) |
+| 1️⃣ | **github Dashboard** | ![Jenkins Dashboard](IMG/2.png) |
+| 2️⃣ | **Build Success in Jenkins** | ![Build Success](IMG/1.png) |
+| 3️⃣ | **Portfolio Deployed on AWS EC2** | ![Portfolio Deployed](IMG/3.png) |
 
 ## ✅ Project Status  
 
