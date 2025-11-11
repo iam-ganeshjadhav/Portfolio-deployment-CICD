@@ -162,8 +162,8 @@ pipeline {
 | 🪜 Step | 🧾 Description | 🖼️ Screenshot |
 |:--------:|----------------|---------------|
 | 1️⃣ | **github Dashboard** | ![Jenkins Dashboard](IMG/2.png) |
-| 2️⃣ | **Build Success in Jenkins** | ![Build Success](IMG/1.png) |
-| 3️⃣ | **Portfolio Deployed on AWS EC2** | ![Portfolio Deployed](IMG/3.png) |
+| 2️⃣ | **Build Success in Jenkins** | ![Build Success](IMG/3.png) |
+| 3️⃣ | **Portfolio Deployed on AWS EC2** | ![Portfolio Deployed](IMG/1.png) |
 
 ## ✅ Project Status  
 
